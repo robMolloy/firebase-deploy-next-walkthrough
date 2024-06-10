@@ -14,6 +14,18 @@ The quickest way to use the benefits discussed in this article is to copy and pa
 
 ## package.json commands
 
+### tl;dr
+
+Add the following to package.json and run in order
+
+```
+    "firebase:install": "npm i -D firebase-tools",
+    "firebase:init-hosting": "node_modules/.bin/firebase init hosting",
+    "firebase:enable-webframeworks": "echo \"        env:\n          FIREBASE_CLI_EXPERIMENTS: webframeworks\" >> .github/workflows/firebase-hosting-merge.yml && echo \"        env:\n          FIREBASE_CLI_EXPERIMENTS: webframeworks\" >> .github/workflows/firebase-hosting-pull-request.yml"
+```
+
+### commands explained
+
 The commands added to package.json are explained here;
 
 - "firebase:install" => Install `firebase-tools` as a dev dependency with `npm i -D firebase-tools`
