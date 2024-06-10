@@ -35,7 +35,7 @@ The commands added to package.json are explained here;
   - Select the appropriate location for the server
   - Set up automatic builds on deploy
   - Add the github repo using format `robMolloy/firebase-deploy-next-test`
-  - No additional build script required on each deploy
+  - Build script required on each deploy
   - Set up automatic deployment when a PR is merged
   - Set up the live github branch
 - "firebase:enable-webframeworks" => Add the enable webframeworks flag with the following command
