@@ -10,7 +10,8 @@ The quickest way to use the benefits discussed in this article is to copy and pa
 - Create a new NextJS project with `npx create-next-app@13` - at this time (June 2024) firebase hosting only works with NextJS versions 12-14.0
   - If using the firebase free tier;
     - Use the pages router
-    - You will need to delete anything that uses cloud functions including any server-side rendering (SSR)
+    - You will need to delete anything that uses cloud functions include any server-side rendering (SSR)
+    - You must remove any Next Image components which use cloud functions to optimise images
 
 ## package.json commands
 
