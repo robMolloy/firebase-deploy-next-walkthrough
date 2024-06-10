@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# firebase-deploy-next-test
 
-## Getting Started
+## Summary
 
-First, run the development server:
+The quickest way to use the benefits discussed in this article is to copy and paste the commands from the `package.json` and run them in order
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Create app
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Create a new NextJS project with `npx create-next-app@latest`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Create a new project in console.firebase.google.com
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## package.json commands
 
-## Learn More
+The commands added to package.json are explained here;
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- "firebase:install" => Install `firebase-tools` as a dev dependency with `npm i -D firebase-tools`
+- "firebase:init-hosting" => Initialise hosting `node_modules/.bin/firebase init hosting` and follow the wizard
+  - Select yes to detected NextJS app
+  - Select the appropriate location for the server
+  - Set up automatic builds on deploy
+  - Add the github repo using format `robMolloy/firebase-deploy-next-test`
+  - No additional build script required on each deploy
+  - Set up automatic deployment when a PR is merged
+  - Set up the live github branch
+- "firebase:enable-webframeworks" => Add the enable webframeworks flag with the following command
+<pre>echo \"        env:\n          FIREBASE_CLI_EXPERIMENTS: webframeworks\" >> .github/workflows/firebase-hosting-merge.yml && echo \"        env:\n          FIREBASE_CLI_EXPERIMENTS: webframeworks\" >> .github/workflows/firebase-hosting-pull-request.yml</pre>
