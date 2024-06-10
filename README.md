@@ -40,3 +40,10 @@ The commands added to package.json are explained here;
   - Set up the live github branch
 - "firebase:enable-webframeworks" => Add the enable webframeworks flag with the following command
 <pre>echo \"        env:\n          FIREBASE_CLI_EXPERIMENTS: webframeworks\" >> .github/workflows/firebase-hosting-merge.yml && echo \"        env:\n          FIREBASE_CLI_EXPERIMENTS: webframeworks\" >> .github/workflows/firebase-hosting-pull-request.yml</pre>
+
+## Reference
+
+View the created files at;
+
+- [https://github.com/robMolloy/firebase-deploy-next-test/blob/main/.github/workflows/firebase-hosting-merge.yml](https://github.com/robMolloy/firebase-deploy-next-test/blob/main/.github/workflows/firebase-hosting-merge.yml)
+- [https://github.com/robMolloy/firebase-deploy-next-test/blob/main/.github/workflows/firebase-hosting-pull-request.yml](https://github.com/robMolloy/firebase-deploy-next-test/blob/main/.github/workflows/firebase-hosting-pull-request.yml)
