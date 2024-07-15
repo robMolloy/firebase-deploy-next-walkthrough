@@ -1,7 +1,6 @@
 {
   "hosting": {
     "appAssociation": "AUTO",
-    "source": ".",
     "rewrites": [
       {
         "source": "/promos/**", // the Dynamic Links start with "https://CUSTOM_DOMAIN/promos/"
