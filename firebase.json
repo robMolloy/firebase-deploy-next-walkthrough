@@ -1,12 +1,13 @@
 {
   "hosting": {
-    "appAssociation": "AUTO",
-    "rewrites": [
-      {
-        "source": "/promos/**", // the Dynamic Links start with "https://CUSTOM_DOMAIN/promos/"
-        "dynamicLinks": true
-      }
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
     ],
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    "frameworksBackend": {
+      "region": "europe-west1"
+    }
   }
 }
