@@ -7,7 +7,7 @@ export default function Home() {
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >
-      v1.0.0
+      v1.0.1
     </main>
   );
 }
