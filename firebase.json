@@ -4,7 +4,7 @@
     "source": ".",
     "rewrites": [
       {
-        "source": "/**",
+        "source": "/promos/**", // the Dynamic Links start with "https://CUSTOM_DOMAIN/promos/"
         "dynamicLinks": true
       }
     ],
