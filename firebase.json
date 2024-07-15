@@ -1,6 +1,13 @@
 {
   "hosting": {
+    "appAssociation": "AUTO",
     "source": ".",
+    "rewrites": [
+      {
+        "source": "/**",
+        "dynamicLinks": true
+      }
+    ],
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   }
 }
